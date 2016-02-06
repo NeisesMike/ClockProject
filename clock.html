@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<!--
+Author: Michael Neises
+Last Edited: February 6, 2016
+--> 
+	<head>
+		<script>
+			function ShowTime(){
+				//This function gets the current local date/time and parses it for hours, minutes, and seconds.
+				//It then prints out the updating time through an html element I named TimeBox.
+				var today = new Date();
+				var hours = today.getHours();
+				var minutes = today.getMinutes();
+				var seconds = today.getSeconds();
+
+				document.getElementById('TimeBox').innerHTML = hours + ":" + minutes + ":" + seconds;
+				//document.getElementById returns the element whose id is given as a parameter.
+				//.innerHTML sets the html content of the element.
+			}
+		</script>
+	</head>
+
+	<body onload="Time()">
+		<!-- onload starts the given function as soon as the page loads. -->
+
+		<div id="TimeBox">
+			<!-- This is where the clock exists. -->
+		</div>
+
+	</body>
+</html>
